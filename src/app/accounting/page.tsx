@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 import { AlertCircle, ClipboardCopy, ClipboardPaste, Download, Trash2 } from "lucide-react";
+import { GeneratorNavbar } from "../_components/GeneratorNavbar";
 
 type RowData = Record<string, unknown>;
 
@@ -249,6 +250,8 @@ export default function ExcelGeneratorPembelianPenjualan() {
   return (
     <div className="min-h-screen bg-slate-50 p-6 text-slate-900">
       <div className="mx-auto max-w-6xl space-y-6">
+        <GeneratorNavbar active="accounting" />
+
         <div>
           <h1 className="text-2xl font-semibold">Generator Pembelian & Penjualan</h1>
           <p className="mt-1 text-sm text-slate-600">
